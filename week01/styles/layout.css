@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    height: 100vh;
+    grid-template: 150px 80px 300px/ 100px auto 200px;
+}
+header{
+    background-color: rgb(54, 52, 52);
+    color: cornsilk;
+    padding: 20px;
+    grid-column: 1/4;
+}
+
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: cornsilk;
+    grid-column: 1/4;
+}    
+main{
+    background-color: rgb(199, 197, 197);
+    grid-column: 1/3;
+    padding: 1em;
+    color: rgb(41, 40, 35);
+}
+
+
+aside {
+    background-color: azure;
+    grid-column: 3/4;
+    padding: 1em;
+}
+footer{
+    background-color: black;
+    color: cornsilk;
+    padding: 1rem;
+    grid-column: 1/4;
+    text-align: center;
+}
