@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Alonso Alvarado</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Home page for Alonso Alvarado, featuring a responsive layout with HTML, CSS Grid, Flexbox, optimized images, and JavaScript that displays the current year and last modified date.">
+    <meta name="author" content="Alonso Alvarado">
+    <link rel="stylesheet" href="styles/base.css">
+<!--script to link JS document(getdates.js). defer is for execute JS when HTML is ready avoiding errors at te time that the JS doc want to find HTLM-->
+    <script src="scripts/getdates.js" defer></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;600&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>WDD 131</h1>
+    <header class="topbar">
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <!-- anadir link de final project-->
+        <nav>
+            <a href="https://www.linkedin.com/in/alonso-alvarado-4b5498223">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p41#p41">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main >
+        <div class="container">
+            <h1>Alonso Alvarado</h1>
+            
+            <div class="cards">
+                <section class="card">
+                    <h2>About Me</h2>
+                <!-- anadir informacion personal y ajustar imagenes-->
+                    <div class="card-content about">
+                        <p>My name is Alonso. I was born in Costa Rica and currently live in Utah. 
+                            I work as a warehouse technician while pursuing a degree in software development 
+                            through BYU-Pathway. I have been married for two years, and my wife and I enjoy exploring new places together.
+                            I love to learn new skills and also I enjoy the time when I play video games with friends
+                        </p>
+                        <img src="./images/profile.png" width="200" height="120" alt="Portrait of Alonso Alvarado"/> 
+                    </div>
+
+                    <h3 class="subhead">Costa Rica</h3>
+                    <!--anadir informacion de costa rica-->
+                    <div class="card-content location">
+                        <figure>
+                        <img src="./images/costa-rica-flag.png" width="200" height="120" alt="Flag of Costa Rica"/>
+                        <figcaption>Official flag of Costa Rica</figcaption>
+                        </figure>
+                        <p>Costa Rica is a country in Central America, bordered by Nicaragua and Panama, with coastlines on both the Pacific Ocean and the Caribbean Sea.
+                            It is internationally recognized for its protected areas and national parks, which help preserve a wide variety of wildlife and ecosystems. 
+                            The country is also known for its stability and strong focus on education and environmental protection.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Web Dev Resources</h2>
+                    <ul class="resources">
+                        <li><a href="https://dev.to/" target="_blank" rel="noreferrer">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noreferrer">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank" rel="noreferrer">CSS-Tricks</a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">W3Schools</a></li>
+                        <li><a href="https://www.udemy.com/" target="_blank" rel="noreferrer">Udemy</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> Alonso Alvarado – Costa Rica</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

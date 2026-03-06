@@ -1,0 +1,192 @@
+*{ box-sizing: border-box; }
+/*TODO ajustar colores*/
+:root{ 
+    --primary:#0F4C81;
+    --secondary:#16324F;
+    --bg:#F3F4F6;
+    --card:#FFFFFF;
+    --border:#D0D7DE;
+    --text:#111827;
+
+}
+
+html, body{ 
+    height: 100%; 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Roboto Flex", sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+
+.topbar{
+  background-color: var(--primary);
+  color: #fff;
+}
+
+#course-title{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0 12px;
+    font-size: x-large;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--secondary);
+    gap: 10px;
+    padding: 6px 8px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 10px;
+    transition: transform .1s ease, background-color .15s ease;
+}
+
+nav a:hover{
+    background-color: var(--secondary);
+    cursor: pointer;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+
+main{ 
+    flex: 1; 
+}
+
+
+.container{
+    width: min(1400px, 96vw);
+    margin: 6px auto 0;
+    padding: 0 8px 8px;
+}
+
+
+.container h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 6px 0 4px;
+    line-height: 1.1;
+    font-family:"Merriweather", serif;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin-top: 6px;
+}
+
+.cards > .card{ 
+    min-width: 0; 
+}
+
+/* Cards */
+.card{
+    background-color: var(--card);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.card h2{
+    margin: 0;
+    background-color:var(--primary);
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 10px;
+    font-family:"Merriweather", serif;
+}
+
+.card-content{ 
+    padding: 14px; 
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 15px;
+    align-items: start;
+}
+
+.about img{
+    margin: 0;
+    border-radius: 6px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.subhead{
+    margin: 0 14px;
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+
+}
+
+.location{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: start;
+    gap: 14px;
+}
+
+figure{
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+figure img{
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+}
+figure figcaption{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.80rem;
+    font-style: italic;
+}
+
+.resources{
+    margin: 12px 0 0;
+    padding-left: 25px;
+}
+
+footer{
+    background-color: var(--primary);
+    color: #bbb;
+    text-align: center;
+    padding: 2px 0;
+}
+
+#lastModified{ 
+    font-size: 0.9em;
+}
+
+
+@media (max-width:800px){
+    .cards{ grid-template-columns: 1fr; }
+    .about{ grid-template-columns: 1fr; }
+    .location{ grid-template-columns: 1fr; }
+    nav{ flex-wrap: wrap; justify-content: center; }
+}
