@@ -23,7 +23,7 @@ body{
     background-color: var(--bg);
 }
 
-.topbar{
+header{
   background-color: var(--primary);
   color:white;
 }
