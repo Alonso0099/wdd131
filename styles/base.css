@@ -1,5 +1,5 @@
 *{ box-sizing: border-box; }
-/*TODO ajustar colores*/
+
 :root{ 
     --primary:#0F4C81;
     --secondary:#16324F;
@@ -172,11 +172,4 @@ footer{
 
 #lastModified{ 
     font-size: 0.9em;
-}
-
-@media (max-width:800px){
-    .cards{ grid-template-columns: 1fr; }
-    .about{ grid-template-columns: 1fr; }
-    .location{ grid-template-columns: 1fr; }
-    nav{ flex-wrap: wrap; justify-content: center; }
 }
