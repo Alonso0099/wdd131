@@ -7,7 +7,6 @@
     --card:#FFFFFF;
     --border:#D0D7DE;
     --text:#111827;
-
 }
 
 html, body{ 
@@ -24,10 +23,9 @@ body{
     background-color: var(--bg);
 }
 
-
 .topbar{
   background-color: var(--primary);
-  color: #fff;
+  color:white;
 }
 
 #course-title{
@@ -37,7 +35,6 @@ body{
     padding: 10px 0 12px;
     font-size: x-large;
 }
-
 
 nav{
     display: flex;
@@ -62,18 +59,15 @@ nav a:hover{
     text-decoration: none;
 }
 
-
 main{ 
     flex: 1; 
 }
-
 
 .container{
     width: min(1400px, 96vw);
     margin: 6px auto 0;
     padding: 0 8px 8px;
 }
-
 
 .container h1{
     text-align: center;
@@ -83,7 +77,6 @@ main{
     line-height: 1.1;
     font-family:"Merriweather", serif;
 }
-
 
 .cards{
     display: grid;
@@ -97,7 +90,6 @@ main{
     min-width: 0; 
 }
 
-/* Cards */
 .card{
     background-color: var(--card);
     border-radius: 10px;
@@ -139,7 +131,6 @@ main{
     text-align: left;
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
-
 }
 
 .location{
@@ -182,7 +173,6 @@ footer{
 #lastModified{ 
     font-size: 0.9em;
 }
-
 
 @media (max-width:800px){
     .cards{ grid-template-columns: 1fr; }

@@ -7,7 +7,7 @@
     <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Home page for Alonso Alvarado, featuring a responsive layout with HTML, CSS Grid, Flexbox, optimized images, and JavaScript that displays the current year and last modified date.">
     <meta name="author" content="Alonso Alvarado">
     <link rel="stylesheet" href="styles/base.css">
-<!--script to link JS document(getdates.js). defer is for execute JS when HTML is ready avoiding errors at te time that the JS doc want to find HTLM-->
+<!--script to link JS document(getdates.js). defer is for execute JS when HTML is ready avoiding errors at te time that the JS doc want to find HTLM. Or I can added at the end of the HTML(body)-->
     <script src="scripts/getdates.js" defer></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <body>
     <header class="topbar">
         <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-        <!-- anadir link de final project-->
+        <!--TODO: anadir link de final project-->
         <nav>
             <a href="https://www.linkedin.com/in/alonso-alvarado-4b5498223">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
@@ -31,20 +31,21 @@
             <h1>Alonso Alvarado</h1>
             
             <div class="cards">
+<!--fisrt card-->
                 <section class="card">
                     <h2>About Me</h2>
-                <!-- anadir informacion personal y ajustar imagenes-->
+                <!--about content of the card-->
                     <div class="card-content about">
                         <p>My name is Alonso. I was born in Costa Rica and currently live in Utah. 
                             I work as a warehouse technician while pursuing a degree in software development 
                             through BYU-Pathway. I have been married for two years, and my wife and I enjoy exploring new places together.
-                            I love to learn new skills and also I enjoy the time when I play video games with friends
+                            I love to learn new skills and also I enjoy the time when I play video games with friends.
                         </p>
                         <img src="./images/profile.png" width="200" height="120" alt="Portrait of Alonso Alvarado"/> 
                     </div>
 
                     <h3 class="subhead">Costa Rica</h3>
-                    <!--anadir informacion de costa rica-->
+                    <!--Costa Rica section of the card-->
                     <div class="card-content location">
                         <figure>
                         <img src="./images/costa-rica-flag.png" width="200" height="120" alt="Flag of Costa Rica"/>
@@ -56,21 +57,24 @@
                         </p>
                     </div>
                 </section>
-
+<!--second card-->
                 <section class="card">
-                    <h2>Web Dev Resources</h2>
+                    <h2>Web Dev Resources</h2> <!--Links with Web dev tools-->
                     <ul class="resources">
                         <li><a href="https://dev.to/" target="_blank" rel="noreferrer">Dev.to Community</a></li>
                         <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noreferrer">Smashing Magazine</a></li>
                         <li><a href="https://css-tricks.com/" target="_blank" rel="noreferrer">CSS-Tricks</a></li>
                         <li><a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">W3Schools</a></li>
                         <li><a href="https://www.udemy.com/" target="_blank" rel="noreferrer">Udemy</a></li>
+                        <li><a href="https://colorhunt.co/" target="_blank" rel="noreferrer">Color Hunt</a></li>
+                        <li><a href="https://www.siegemedia.com/contrast-ratio" target="_blank" rel="noreferrer">Contrast Ratio</a></li>
                     </ul>
                 </section>
             </div>
         </div>
     </main>
     <footer>
+<!--Id's for JS-->
         <p>© <span id="currentYear"></span> Alonso Alvarado – Costa Rica</p>
         <p id="lastModified"></p>
     </footer>
