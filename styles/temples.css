@@ -44,16 +44,17 @@ header {
 }
 
 .navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 0 1rem 1rem;
 }
 
-.navigation.open {
-    display: flex;
+.navigation.open a {
+    display: block;
 }
 
 .navigation a {
+    display: none;
     color: var(--white);
     text-decoration: none;
     padding: 0.8rem;
