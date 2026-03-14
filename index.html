@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Alonso Alvarado</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Home page for Alonso Alvarado">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals Home page for Alonso Alvarado">
     <meta name="author" content="Alonso Alvarado">
     <link rel="stylesheet" href="styles/base.css">
-<!--script to link JS document(getdates.js). defer is for execute JS when HTML is ready avoiding errors at te time that the JS doc want to find HTLM. Or I can added at the end of the HTML(body)-->
     <script src="scripts/getdates.js" defer></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +20,6 @@
 <body>
     <header>
         <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-        <!--TODO: anadir link de final project-->
         <nav>
             <a href="https://www.linkedin.com/in/alonso-alvarado-4b5498223" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://byupw.instructure.com/" target="_blank" rel="noreferrer">Canvas</a>
@@ -30,29 +28,25 @@
         </nav>
     </header>
 
-    <main >
+    <main>
         <div class="container">
             <h1>Alonso Alvarado</h1>
             
             <div class="cards">
-<!--fisrt card-->
                 <section class="card">
                     <h2>About Me</h2>
-                <!--about content of the card-->
                     <div class="card-content about">
                         <p>My name is Alonso. I was born in Costa Rica and currently live in Utah. 
                             I work as a warehouse technician while pursuing a degree in software development 
                             through BYU-Pathway. I have been married for two years, and my wife and I enjoy exploring new places together.
-                            I love to learn new skills and also I enjoy the time when I play video games with friends.
+                            I love learning new skills, and I also enjoy spending time playing video games with friends.
                         </p>
-                        <img src="./images/profile.jpg" width="400" height="325" alt="Portrait of Alonso Alvarado"/> 
+                        <img src="./images/profile.jpg" width="400" height="325" alt="Portrait of Alonso Alvarado"> 
                     </div>
-
                     <h3 class="subhead">Costa Rica</h3>
-                    <!--Costa Rica section of the card-->
                     <div class="card-content location">
                         <figure>
-                        <img src="./images/costa-rica-flag.png" width="300" height="198" alt="Flag of Costa Rica"/>
+                        <img src="./images/costa-rica-flag.png" width="300" height="198" alt="Official Flag of Costa Rica"/>
                         <figcaption>Official flag of Costa Rica</figcaption>
                         </figure>
                         <p>Costa Rica is a country in Central America, bordered by Nicaragua and Panama, with coastlines on both the Pacific Ocean and the Caribbean Sea.
@@ -61,9 +55,10 @@
                         </p>
                     </div>
                 </section>
-<!--second card-->
+
                 <section class="card">
-                    <h2>Web Dev Resources</h2> <!--Links with Web dev tools-->
+                    <h2>Web Dev Resources</h2>
+                    <div class="card-content">
                     <ul class="resources">
                         <li><a href="https://dev.to/" target="_blank" rel="noreferrer">Dev.to Community</a></li>
                         <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noreferrer">Smashing Magazine</a></li>
@@ -73,12 +68,13 @@
                         <li><a href="https://colorhunt.co/" target="_blank" rel="noreferrer">Color Hunt</a></li>
                         <li><a href="https://www.siegemedia.com/contrast-ratio" target="_blank" rel="noreferrer">Contrast Ratio</a></li>
                     </ul>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
+
     <footer>
-<!--Id's for JS-->
         <p>© <span id="currentYear"></span> Alonso Alvarado – Costa Rica</p>
         <p id="lastModified"></p>
     </footer>

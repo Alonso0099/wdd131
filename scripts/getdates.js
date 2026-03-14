@@ -3,7 +3,7 @@ year.textContent = new Date().getFullYear();
 
 
 const lastMod =document.querySelector("#lastModified");
-lastMod.textContent = `Last Modification: ${document.lastModified}`;
+lastMod.textContent = `Last Modified: ${document.lastModified}`;
 
 //This are notes for me
 /* 

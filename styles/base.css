@@ -1,12 +1,13 @@
 *{ box-sizing: border-box; }
 
 :root{ 
-    --primary:#0F4C81;
-    --secondary:#16324F;
+    --primary:#a6192e;
+    --secondary:#7a1021;
     --bg:#FFFFFF;
     --card:#FFFFFF;
     --border:#D0D7DE;
     --text:#111827;
+    --accent: #f8ecef;
 }
 
 html, body{ 
@@ -32,16 +33,18 @@ header{
     display: block;
     text-align: center;
     font-weight: 700;
-    padding: 10px 0 12px;
-    font-size: x-large;
+    padding: 1rem 0;
+    font-size: 1.75rem;
+    font-family: "Merriweather", serif;
 }
 
 nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: var(--secondary);
-    gap: 10px;
-    padding: 6px 8px;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
 }
 
 nav a{
@@ -53,8 +56,8 @@ nav a{
 }
 
 nav a:hover{
-    background-color: var(--secondary);
-    cursor: pointer;
+    background-color: #ffffff;
+    color: var(--primary);
     transform: translateY(-1px);
     text-decoration: none;
 }
@@ -64,18 +67,19 @@ main{
 }
 
 .container{
-    width: min(1400px, 96vw);
+    width: min(1100px, 94vw);
     margin: 6px auto 0;
     padding: 0 8px 8px;
 }
 
 .container h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.2rem;
     margin: 0;
-    padding: 6px 0 4px;
+    padding: 0.5rem 0 1rem;
     line-height: 1.1;
     font-family:"Merriweather", serif;
+    color: var(--primary);
 }
 
 .cards{
@@ -159,17 +163,65 @@ figure figcaption{
 }
 
 .resources{
-    margin: 12px 0 0;
-    padding-left: 25px;
+    margin: 0;
+    padding-left: 1.25rem;
+}
+.resources li{
+    margin-bottom: 0.65rem;
+}
+.resources a {
+    color: var(--primary);
+    text-decoration: none;
+}
+.resources a:hover {
+    text-decoration: underline;
 }
 
 footer{
     background-color: var(--primary);
-    color: #bbb;
+    color: #f3d9de;
     text-align: center;
     padding: 2px 0;
+    margin: 0.35rem 0;
 }
 
 #lastModified{ 
     font-size: 0.9em;
+}
+
+@media screen and (max-width: 500px){
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about img {
+        justify-self: center;
+        max-width: 220px;
+    }
+    .location {
+        grid-template-columns: 1fr;
+    }
+    figure {
+        justify-self: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    #course-title {
+        font-size: 1.3rem;
+    }
+    .container h1 {
+        font-size: 1.8rem;
+    }
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav a {
+        text-align: center;
+    }
+    
 }
