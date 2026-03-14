@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #a6192e;
+    --primary-dark: #7a1021;
+    --accent-color: #f8ecef;
+    --text-color: #222222;
+    --white: #ffffff;
+    --border-color: #dddddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    background-color: #fafafa;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.site-title {
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 1rem 0 1.5rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    background-color: var(--accent-color);
+    color: var(--primary-dark);
+    text-align: center;
+    padding: 0.9rem;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
