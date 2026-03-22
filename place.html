@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Costa Rica</title>
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Costa Rica</h1>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/costa-rica-small.webp" media="(max-width: 500px)">
+        <source srcset="images/costa-rica-medium.webp" media="(max-width: 1000px)">
+        <img src="images/costa-rica-large.webp" alt="Scenic landscape of Costa Rica with mountains and tropical greenery">
+      </picture>
+    </div>
+
+    <section class="card data">
+      <h2>Data</h2>
+      <p><strong>Capital:</strong> San José</p>
+      <p><strong>Official Language:</strong> Spanish</p>
+      <p><strong>Population:</strong> 5.2 million</p>
+      <p><strong>Area:</strong> 51,100 km²</p>
+      <p><strong>Currency:</strong> Costa Rican Colón</p>
+      <p><strong>Time Zone:</strong> UTC -6</p>
+      <p><strong>Calling Code:</strong> +506</p>
+      <p><strong>Famous For:</strong> Biodiversity, beaches, volcanoes, and rainforests</p>
+    </section>
+
+    <section class="card weather">
+      <h2>Weather</h2>
+      <img class="weather-icon" src="images/weather.svg" alt="Partly cloudy weather icon">
+      <p><strong>Temperature:</strong> <span id="temp">28</span> °C</p>
+      <p><strong>Conditions:</strong> Partly Cloudy</p>
+      <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="currentYear"></span> Alonso Alvarado | Costa Rica</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

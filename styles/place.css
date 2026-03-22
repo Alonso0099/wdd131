@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #b22234;
+  --secondary-color: #002b7f;
+  --accent-color: #ffffff;
+  --light-bg: #f7f7f7;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text-color: #222222;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+  margin-top: 0;
+}
+
+header {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color), var(--secondary-color));
+  color: var(--accent-color);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 6px solid var(--accent-color);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero picture,
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.25rem;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.data h2,
+.weather h2 {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.data p,
+.weather p {
+  margin: 0.6rem 0;
+  line-height: 1.5;
+}
+
+.weather-icon {
+  display: block;
+  width: 60px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+footer {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color), var(--secondary-color));
+  color: var(--accent-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  .weather h2::after {
+    content: "";
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  main {
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1rem 0;
+  }
+
+  .hero {
+    position: relative;
+    margin: 0;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .data,
+  .weather {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    z-index: 2;
+    margin: 0;
+  }
+
+  .data {
+    left: 2rem;
+  }
+
+  .weather {
+    right: 2rem;
+  }
+
+  .weather-icon {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+  }
+}
