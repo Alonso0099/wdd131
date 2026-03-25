@@ -1,0 +1,17 @@
+main img {
+  display: block;
+  width: 400px;
+  height: 600px;
+  margin: 1rem auto;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
