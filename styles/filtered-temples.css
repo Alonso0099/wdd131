@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #a6192e;
+    --primary-dark: #7a1021;
+    --accent-color: #f8ecef;
+    --text-color: #222222;
+    --white: #ffffff;
+    --border-color: #dddddd;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    background-color: #fafafa;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.site-title {
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+}
+
+.navigation a {
+    display: none;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.navigation.open a {
+    display: block;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: var(--white);
+    color: var(--primary-color);
+    outline: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 1rem 0 1.5rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.temple-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.temple-card h2 {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    margin: 1rem 1rem 0.5rem;
+}
+
+.temple-card p {
+    margin: 0.4rem 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.temple-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+@media screen and (min-width: 500px) {
+    #menu-button {
+    display: none;
+    }
+
+    .navigation {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 1rem 1rem;
+    }
+
+    .navigation a {
+    display: block;
+    }
+
+    .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery .temple-card:last-child:nth-child(3n + 1) {
+    grid-column: 2 / 3;
+    }
+}
