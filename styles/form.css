@@ -158,3 +158,13 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+@media (min-width: 768px) {
+    form,
+    .card {
+        padding: 2rem;
+    }
+
+    .confirmation {
+        gap: 2rem;
+    }
+}
