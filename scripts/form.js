@@ -1,4 +1,3 @@
-
 const products = [
   {
     id: "fc-1888",
@@ -25,20 +24,19 @@ const products = [
     name: "warp equalizer",
     averagerating: 5.0
   }
-  
 ];
 
 const productSelect = document.querySelector("#productName");
 
-products.forEach(product =>{
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-})
+products.forEach(product => {
+  const option = document.createElement("option");
+  option.value = product.id;
+  option.textContent = product.name;
+  productSelect.appendChild(option);
+});
+
 const year = document.querySelector("#currentYear");
 year.textContent = new Date().getFullYear();
 
-
-const lastMod =document.querySelector("#lastModified");
+const lastMod = document.querySelector("#lastModified");
 lastMod.textContent = `Last Modified: ${document.lastModified}`;
