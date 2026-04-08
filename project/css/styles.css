@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1F3A5F;
-    --secondary-color: #2F8F83;
+    --secondary-color: #1F3A5F;
     --background-color: #F5F7FA;
     --text-color: #333333;
     --white: #FFFFFF;
@@ -113,6 +113,7 @@ section {
 .intro p {
     max-width: 750px;
     margin: 0 auto 1rem;
+    color: var(--text-color);
 }
 
 .card {
@@ -130,7 +131,7 @@ section {
 
 .card p {
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .card-actions {
@@ -198,11 +199,11 @@ button:disabled:hover {
 }
 
 .taken-btn {
-    background-color: #4FB6A6;
+    background-color: var(--primary-color);
 }
 
 .undo-btn {
-    background-color: #7f8c8d;
+    background-color: #5f6b73;
 }
 
 form {
@@ -230,6 +231,8 @@ textarea {
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     background-color: var(--white);
+    color: var(--text-color);
+
 }
 
 input:focus,
@@ -237,6 +240,7 @@ select:focus,
 textarea:focus {
     outline: 2px solid var(--secondary-color);
     border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(31, 58, 95, 0.15);
 }
 
 input:focus,
@@ -307,7 +311,7 @@ footer a:hover {
 
 .center {
     text-align: center;
-    color: #4a5568;
+    color: var(--text-color);
     font-weight: 500;
 }
 .tracker-layout {
