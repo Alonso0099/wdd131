@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PillWise medication tracker page">
+    <meta name="author" content="Alonso Alvarado">
+    <title>PillWise | Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tracker.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>PillWise</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tracker.html" class="active">Tracker</a>
+        <a href="guide.html">Guide</a>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <h2>Medication Tracker</h2>
+        <p>
+            Add your medications, track daily doses, and monitor refill status in one place.
+        </p>
+    </section>
+
+    <section class="tracker-layout">
+        <div class="tracker-form-column">
+            <form id="med-form">
+                <label for="name">Medication Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <div class="form-grid">
+                    <div>
+                        <label for="strength">Strength (mg)</label>
+                        <input type="number" id="strength" name="strength" min="1" required>
+                    </div>
+
+                    <div>
+                        <label for="total">Total Pills</label>
+                        <input type="number" id="total" name="total" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="dailyDose">Daily Dose (pills)</label>
+                        <input type="number" id="dailyDose" name="dailyDose" min="1" required>
+                    </div>
+                </div>
+
+                <label for="refillThreshold">Refill Alert (when pills reach)</label>
+                <input type="number" id="refillThreshold" name="refillThreshold" min="0" value="7" required>
+
+                <label for="notes">Notes</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Example: Take with food"></textarea>
+
+                <button type="submit">Add Medication</button>
+            </form>
+        </div>
+
+        <div class="tracker-list-column">
+            <h2>Your Medications</h2>
+            <div id="med-list"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 PillWise</p>
+    <a href="references.html">References</a>
+</footer>
+
+</body>
+</html>
