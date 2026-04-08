@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1F3A5F;
-    --secondary-color: #4FB6A6;
+    --secondary-color: #2F8F83;
     --background-color: #F5F7FA;
     --text-color: #333333;
     --white: #FFFFFF;
@@ -130,6 +130,7 @@ section {
 
 .card p {
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .card-actions {
@@ -161,6 +162,7 @@ button,
     display: inline-block;
     background-color: var(--secondary-color);
     color: var(--white);
+    font-weight: 600;
     border: none;
     border-radius: 8px;
     padding: 0.8rem 1.1rem;
@@ -305,7 +307,7 @@ footer a:hover {
 
 .center {
     text-align: center;
-    color: #6c7a89;
+    color: #4a5568;
     font-weight: 500;
 }
 .tracker-layout {
